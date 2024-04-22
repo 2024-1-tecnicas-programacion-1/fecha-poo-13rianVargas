@@ -13,10 +13,12 @@ public class Fecha {
         this.mes = mes;
     }
 
+    //Complejidad temporal: O(1) Tiempo constante.//
     public String fechaCorta(){
         return dia  + "/" + mes + "/" + ano;
     }
 
+    //Complejidad temporal: O(1) Tiempo constante.//
     public boolean validarFecha(){
         if(dia < 32 && dia > 0 && (mes == 1 || mes == 3 || mes == 5 || mes == 7 || mes == 8 || mes == 10 || mes == 12)){
             return true;
@@ -30,11 +32,12 @@ public class Fecha {
         }
     }
 
+    //Complejidad temporal: O(1) Tiempo constante.//
     public String mesLetra(){
         HashMap<Integer, String> meses = new HashMap<>();
-        meses.put(1,"enero");
-        meses.put(2,"febrero");
-        meses.put(3,"marzo");
+        meses.put(1, "enero");
+        meses.put(2, "febrero");
+        meses.put(3, "marzo");
         meses.put(4, "abril");
         meses.put(5, "mayo");
         meses.put(6, "junio");
@@ -48,6 +51,7 @@ public class Fecha {
         return meses.get(mes);
     }
 
+    //Complejidad temporal: O(1) Tiempo constante.//
     public String fechaLarga(){
         return dia  + " de " + mesLetra() + " de " + ano;
     }
